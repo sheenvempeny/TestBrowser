@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <collectionViewItem id="BO2-in-3JR" customClass="TabButtonCollectionViewItem" customModule="TestBrowser" customModuleProvider="target">
+            <connections>
+                <outlet property="box" destination="SOv-Bh-z8b" id="PTU-H2-cvF"/>
+                <outlet property="closeButton" destination="wCo-vm-mTb" id="0W1-Ht-Sr7"/>
+                <outlet property="imageView" destination="eZs-dS-5jx" id="NdY-hQ-cqP"/>
+                <outlet property="textField" destination="Pne-0x-Fha" id="GkN-Ce-5Z8"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="I2X-9o-PjK"/>
+                <outlet property="webIcon" destination="eZs-dS-5jx" id="Omd-pn-BgA"/>
+                <outlet property="webIconBig" destination="xaT-Qp-4YN" id="rag-Wf-fx2"/>
+            </connections>
+        </collectionViewItem>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView focusRingType="none" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="26"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <box focusRingType="none" boxType="custom" borderType="bezel" cornerRadius="8" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="SOv-Bh-z8b" customClass="MouseTrackingBox" customModule="TestBrowser" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="120" height="26"/>
+                    <view key="contentView" id="mEI-fb-bYD">
+                        <rect key="frame" x="1" y="1" width="118" height="24"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField hidden="YES" focusRingType="none" horizontalHuggingPriority="252" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pne-0x-Fha">
+                                <rect key="frame" x="25" y="6" width="92" height="13"/>
+                                <textFieldCell key="cell" lineBreakMode="charWrapping" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" alignment="left" title="Label" usesSingleLineMode="YES" id="krr-I6-tFD">
+                                    <font key="font" metaFont="systemLight" size="10"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eZs-dS-5jx">
+                                <rect key="frame" x="4" y="5" width="15" height="15"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="safari.fill" catalog="system" id="J6H-VW-VP2"/>
+                            </imageView>
+                            <button hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCo-vm-mTb">
+                                <rect key="frame" x="4" y="5" width="15" height="15"/>
+                                <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="xmark.circle" catalog="system" imagePosition="only" alignment="left" imageScaling="proportionallyDown" inset="2" id="2a1-N3-hYL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="closeTabWithSender:" target="BO2-in-3JR" id="zcB-uw-oGo"/>
+                                </connections>
+                            </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xaT-Qp-4YN">
+                                <rect key="frame" x="5" y="2" width="108" height="20"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="safari.fill" catalog="system" id="VCt-4Y-YB0"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="xaT-Qp-4YN" firstAttribute="height" secondItem="mEI-fb-bYD" secondAttribute="height" constant="-10" id="An6-1q-Z2S"/>
+                            <constraint firstItem="eZs-dS-5jx" firstAttribute="leading" secondItem="mEI-fb-bYD" secondAttribute="leading" constant="4" id="JNa-Te-Tz8"/>
+                            <constraint firstItem="xaT-Qp-4YN" firstAttribute="width" secondItem="mEI-fb-bYD" secondAttribute="width" constant="-10" id="OZW-4F-m7W"/>
+                            <constraint firstItem="Pne-0x-Fha" firstAttribute="leading" secondItem="eZs-dS-5jx" secondAttribute="trailing" constant="8" symbolic="YES" id="STS-YY-yvM"/>
+                            <constraint firstItem="xaT-Qp-4YN" firstAttribute="centerX" secondItem="mEI-fb-bYD" secondAttribute="centerX" id="UrY-gf-F3x"/>
+                            <constraint firstItem="xaT-Qp-4YN" firstAttribute="centerY" secondItem="mEI-fb-bYD" secondAttribute="centerY" id="ogx-Tz-uNX"/>
+                            <constraint firstItem="wCo-vm-mTb" firstAttribute="leading" secondItem="mEI-fb-bYD" secondAttribute="leading" constant="4" id="xvR-R4-CyL"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstItem="wCo-vm-mTb" firstAttribute="centerY" secondItem="SOv-Bh-z8b" secondAttribute="centerY" id="4ax-aR-4uS"/>
+                        <constraint firstItem="eZs-dS-5jx" firstAttribute="centerY" secondItem="SOv-Bh-z8b" secondAttribute="centerY" id="E6b-aJ-FCM"/>
+                        <constraint firstItem="Pne-0x-Fha" firstAttribute="leading" secondItem="SOv-Bh-z8b" secondAttribute="leading" constant="28" id="W2c-Zk-zVA"/>
+                        <constraint firstAttribute="trailing" secondItem="Pne-0x-Fha" secondAttribute="trailing" constant="4" id="Xex-cL-oVP"/>
+                        <constraint firstItem="Pne-0x-Fha" firstAttribute="centerY" secondItem="SOv-Bh-z8b" secondAttribute="centerY" id="Xxa-7h-CbK"/>
+                    </constraints>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstItem="SOv-Bh-z8b" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="RFR-xp-Knm"/>
+                <constraint firstAttribute="bottom" secondItem="SOv-Bh-z8b" secondAttribute="bottom" id="fzm-WB-p8R"/>
+                <constraint firstAttribute="trailing" secondItem="SOv-Bh-z8b" secondAttribute="trailing" id="l4J-ty-yTb"/>
+                <constraint firstItem="SOv-Bh-z8b" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="qDU-kM-C9K"/>
+            </constraints>
+            <point key="canvasLocation" x="-195" y="-188"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="safari.fill" catalog="system" width="15" height="15"/>
+        <image name="xmark.circle" catalog="system" width="15" height="15"/>
+    </resources>
+</document>
